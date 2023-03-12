@@ -13,11 +13,18 @@ export interface PromotionResponse {
 }
 
 export async function fetchPromotion(): Promise<PromotionResponse | null> {
-  return fetch(`${API_HOST}/api/p`, {
-    headers: {
-      'x-version': getExtensionVersion(),
-    },
-  }).then((r) => r.json())
+  // console.log('fetchPromotion');
+  const url = 'https://chat.forchange.cn/'
+  return {
+    url,
+    title: 'FORCHANGE AI EDU',
+    text: 'https://chat.forchange.cn/',
+  } as PromotionResponse
+  // return fetch(`${API_HOST}/api/p`, {
+  //   headers: {
+  //     'x-version': getExtensionVersion(),
+  //   },
+  // }).then((r) => r.json())
 }
 
 export async function fetchExtensionConfigs(): Promise<{

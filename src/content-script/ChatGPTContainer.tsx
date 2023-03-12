@@ -18,6 +18,7 @@ function ChatGPTContainer(props: Props) {
     fetchPromotion,
     { shouldRetryOnError: false },
   )
+  console.log('query:', query)
   return (
     <>
       <div className="chat-gpt-card">

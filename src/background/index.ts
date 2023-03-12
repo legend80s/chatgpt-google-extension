@@ -6,6 +6,7 @@ import { Provider } from './types'
 
 async function generateAnswers(port: Browser.Runtime.Port, question: string) {
   const providerConfigs = await getProviderConfigs()
+  // console.log('providerConfigs:', providerConfigs);
 
   let provider: Provider
   if (providerConfigs.provider === ProviderType.ChatGPT) {
@@ -43,7 +44,7 @@ Browser.runtime.onConnect.addListener((port) => {
     try {
       await generateAnswers(port, msg.question)
     } catch (err: any) {
-      console.error(err)
+      console.error('generateAnswers error', err)
       port.postMessage({ error: err.message })
     }
   })

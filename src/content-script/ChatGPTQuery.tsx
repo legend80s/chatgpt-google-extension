@@ -113,7 +113,7 @@ function ChatGPTQuery(props: Props) {
   if (error === 'UNAUTHORIZED' || error === 'CLOUDFLARE') {
     return (
       <p>
-        Please login and pass Cloudflare check at{' '}
+        1 Please login and pass Cloudflare check at{' '}
         <a href="https://chat.openai.com" target="_blank" rel="noreferrer">
           chat.openai.com
         </a>

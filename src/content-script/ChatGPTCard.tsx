@@ -26,6 +26,8 @@ function ChatGPTCard(props: Props) {
       </p>
     )
   }
+
+  console.log('triggered:', triggered)
   if (triggered) {
     return <ChatGPTQuery question={props.question} onStatusChange={props.onStatusChange} />
   }

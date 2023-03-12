@@ -8,6 +8,7 @@ import './styles.scss'
 import { getPossibleElementByQuerySelector } from './utils'
 
 async function mount(question: string, siteConfig: SearchEngine) {
+  console.log('mount:', { question, siteConfig })
   const container = document.createElement('div')
   container.className = 'chat-gpt-container'
 
